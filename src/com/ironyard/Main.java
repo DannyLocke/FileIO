@@ -13,13 +13,14 @@ public class Main {
     public static void main(String[] args) throws IOException {
         System.out.println("Welcome, music lovers!");
 
-        //TRY CATCH TO LOAD SONG
-        try{
-            song = Song.loadSong();
-            System.out.println("Loaded saved song");
-        }catch(Exception e){
-            System.out.println("Enter a new song");
-        }
+        while(true) {
+            //TRY CATCH TO LOAD SONG
+            try {
+                song = Song.loadSong();
+                System.out.println("Loaded saved song");
+            } catch (Exception e) {
+                System.out.println("Enter a new song");
+            }
             //METHODS TO GATHER USER INPUT
             song.chooseName();
             song.chooseArtist();
@@ -27,12 +28,12 @@ public class Main {
             song.chooseGenre();
             song.chooseOnSpotify();
 
-        //CALL saveSong(song)
-        Song.saveSong(song);
+            //CALL saveSong(song)
+            Song.saveSong(song);
 
-        //VERIFY SAVED SONG
-        System.out.printf("Song:  %s\n Artist: %s\n Album: %s\n Genre: %s\n On Spotify: %b", song.getName(), song.getArtist(), song.getAlbum(), song.getGenre(), song.isOnSpotify());
-
+            //VERIFY SAVED SONG
+            System.out.printf("Song:  %s\n Artist: %s\n Album: %s\n Genre: %s\n On Spotify: %b", song.getName(), song.getArtist(), song.getAlbum(), song.getGenre(), song.isOnSpotify());
+        }
         }//end main()
 
 }//end class Main

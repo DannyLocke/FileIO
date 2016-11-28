@@ -7,12 +7,12 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
  * Created by dlocke on 11/23/16.
  */
+
 public class Song {
     String name;
     String artist;
@@ -20,7 +20,6 @@ public class Song {
     String genre;
     boolean onSpotify;
 
-    //public static ArrayList<String> songs = new ArrayList(); // song list
     public Scanner scanner = new Scanner(System.in);
 
     public Song(String name, String artist, String album, String genre, boolean onSpotify) {
@@ -40,9 +39,15 @@ public class Song {
         return this.getName();
     }
 
+    //new song? or update existing song?
     public void chooseName(){
-        System.out.println("Please enter the song name.");
+        if(name != null){
+        System.out.println("Please update the song, beginning with the name.");
         name = scanner.nextLine();
+        } else{
+            System.out.println("Please enter the song name.");
+            name = scanner.nextLine();
+        }
     }
 
     public void chooseArtist(){
@@ -132,4 +137,5 @@ public class Song {
     public void setOnSpotify(boolean onSpotify) {
         this.onSpotify = onSpotify;
     }
-}
+
+}//end class Song
