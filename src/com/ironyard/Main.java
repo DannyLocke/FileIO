@@ -35,32 +35,4 @@ public class Main {
 
         }//end main()
 
-
-//    public static String nextLine(){
-//        String line = scanner.nextLine();
-//        while (nextLine().startsWith("/")){
-//            switch(line){
-//                case "/save":
-//                    try{
-//                        Song.saveSong(song);
-//                        System.out.println("Saved song");
-//                    }catch (IOException e){
-//                        e.printStackTrace();
-//                    }
-//                    break;
-//
-//                case "/exit":
-//                    System.exit(0);
-//                    break;
-//
-//                default:
-//                    System.out.println("Invalid entry");
-//                    break;
-//            }//end switch(line)
-//            line = scanner.nextLine();
-//        }//end while loop
-//        return line;
-//    }//end nextLine()
-
-
 }//end class Main
