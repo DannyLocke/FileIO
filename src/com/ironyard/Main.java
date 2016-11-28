@@ -31,7 +31,7 @@ public class Main {
         Song.saveSong(song);
 
         //VERIFY SAVED SONG
-        System.out.printf("Song:  %s", song);
+        System.out.printf("Song:  %s\n Artist: %s\n Album: %s\n Genre: %s\n On Spotify: %b", song.getName(), song.getArtist(), song.getAlbum(), song.getGenre(), song.isOnSpotify());
 
         }//end main()
 

@@ -52,12 +52,12 @@ public class Song {
 
     public void chooseAlbum(){
         System.out.println("Please enter the song's album.");
-        artist = scanner.nextLine();
+        album = scanner.nextLine();
     }
 
     public void chooseGenre(){
         System.out.println("Please enter the song's genre.");
-        artist = scanner.nextLine();
+        genre = scanner.nextLine();
     }
 
     public void chooseOnSpotify(){
